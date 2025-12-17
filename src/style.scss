@@ -1,0 +1,69 @@
+// Mainīgie SCSS
+@import "./google_font";
+
+
+$main_background:linear-gradient(45deg,rgb(212, 0, 255),rgb(0, 255, 85));
+$default_font:Arial;
+
+html{
+    background-image: $main_background;
+    height: 100vh;
+    font-family: $default_font;
+}
+
+
+
+// Teksta noformēšana
+
+@mixin main_text($size,$color,$font){
+    font-size: $size;
+     font-family: $font;
+     text-align: center;
+     color:$color;
+     margin: 20px;
+     padding: 20px;
+}
+
+h1{
+    @include main_text(3rem,red,BBH Bartle);
+}
+
+h2{
+    @include main_text(2rem,blue,Orbitron
+);
+}
+
+h3{
+    @include main_text(1.5rem,black,$default_font);
+}
+
+section{
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.729);
+    padding: 50px;
+    margin:20px auto;
+
+
+    h1{
+           font-size: 2.3rem; 
+    }
+
+    p{
+
+    }
+
+    img{
+        width: 200px;
+         filter: grayscale(50);
+         transition: .3s ease;
+         
+         &:hover{
+            filter: grayscale(0);
+            transform: scale(1.3) rotate(-10deg);
+            transition: 1s ease;
+        }
+    }
+   
+
+
+}
